@@ -43,7 +43,7 @@ export default function Register() {
         })
         let resultOfValidation = schema.validate(user, { abortEarly: false });
         if (resultOfValidation.error == undefined) {
-            let { data } = await axios.post("https://route-movies-api.vercel.app/signup", user)
+            let { data } = await axios.post("https://movies-api.routemisr.com/signup", user)
 
             if (data.message == "success") {
                 $(".alert-success").fadeIn(1000).fadeOut(1000, function () {
